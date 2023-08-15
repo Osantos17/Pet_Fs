@@ -1,0 +1,9 @@
+<h1>Photo info</h1>
+<h2><%= @pet.name %></h2>
+<p>Name: <%= @pet.name %></p>
+<p>Breed: <%= @pet.breed %></p>
+<img src=<%= @pet.image %> width = "400" height="400">
+<br>
+<a href="/pets">Back to all pets</a>
+<%= link_to "Edit pet", edit_pet_path(@pet) %>
+<%= link_to "Destroy pet", pet_path(@pet), data: {turbo_method: :delete} %>
